@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Care GPT</title>
+    <link rel="stylesheet" href="website.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Group13 Health Care GPT</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Health Care GPT</h2>
+            <p>
+               Healthcare GPT is designed to assist healthcare professionals by providing accurate and comprehensive medical knowledge. It helps in clinical decision-making, answering patient queries, and summarizing large volumes of medical literature.
+               <img src="healthcaregpt.png" alt="Health Care GPT Illustration" style="width: 100%; max-width: 600px; display: block; margin: 20px auto;">
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11354035/" target="_blank">Improve accuracy</a></li>
+                <li><a href="https://medium.com/mdbros/healthcare-gpt-model-%E6%BA%96%E7%A2%BA%E5%BA%A6%E5%9F%BA%E6%BA%96%E6%8E%A2%E8%A8%8E-%E6%8A%80%E8%A1%93%E8%A7%A3%E8%AE%80%E8%88%87%E6%87%89%E7%94%A8-99ef7cff79bd" target="_blank">Scalable Solutions</a></li>
+                <li><a href="https://heho.com.tw/archives/325571" target="_blank">Time efficieny</a></li>
+                <img src="chatgpthealth.jpg" alt="GPT feature" style="width: 50%; max-width: 400px; display: block; margin: 15px auto;">
+        </section>
+
+        <section id="examples">
+            <h2>Examples of Health Care GPT & RAG</h2>
+            <article>
+                <h3>Health Care GPT in Action</h3>
+                <p>Health Care GPT has been used in various scenarios, such as:</p>
+                <ul>
+                    <li><strong>Virtual Doctor Assistance:</strong> Helping patients determine whether symptoms require medical attention.</li>
+                    <li><strong>Drug Interactions:</strong> Providing information about possible side effects when combining medications.</li>
+                    <li><strong>Chronic Disease Management:</strong> Offering tailored advice for managing conditions like diabetes or hypertension.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>The Role of RAG (Retrieval-Augmented Generation)</h3>
+                <p>RAG is a method that enhances the capabilities of Health Care GPT by:</p>
+                <ul>
+                    <li>Integrating <strong>real-time medical databases</strong> to provide up-to-date and verified information.</li>
+                    <li>Ensuring that responses are <strong>contextually accurate</strong> and aligned with the latest medical guidelines.</li>
+                    <li>Improving <strong>personalized recommendations</strong> by retrieving relevant data during conversations.</li>
+                </ul>
+                <p>
+                    For instance, if a user asks about a specific rare disease, RAG allows Health Care GPT to fetch the most relevant and detailed information from trusted sources in real-time.
+                </p>
+                 <p> Please click the video to watch further introduction
+                <video controls style="width: 100%; max-width: 600px; display: block; margin: 20px auto;">
+                            <source src="第13組.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+               
+                
+            </article>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How can we avoid data bias ?</h3>
+                <p>
+                    We incorporate representative data and balance across categories. Moreover, we also feed our data with rare cases, and do multiple regreesion anaylyze. Last but not least, healthcare gpt requires human review that can help audit the bias.
+                </p>
+                <hr>
+            </div>
+            <div class="faq-item">
+                <h3>Are there Data Privacy and Regulatory Compliance?</h3>
+                <p>
+                    Yes, Taiwan’s Personal Data Protection Act (PDPA) imposes strict regulations on handling medical data. Ensuring compliance while balancing the need for large-scale data aggregation poses a significant challenge, especially when integrating data across hospitals and clinics. Public concerns about data misuse could further limit access to high-quality datasets.
+                </p>
+                <hr>
+            </div>
+            <div class="faq-item">
+                <h3>Can Health Care GPT diagnose illnesses?</h3>
+                <p>
+                    No, Health Care GPT provides guidance and suggestions but does not replace professional medical advice.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Health Care GPT. All rights reserved. Designed by Kenny Wang</p>
+    </footer>
+
+    <script >
+ document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        alert(`Thank you, ${name}. Your message has been received!`);
+        document.getElementById('contact-form').reset();
+    } else {
+        alert('Please fill in all fields.');
+    }
+});
+
+
+    document.querySelectorAll('.faq-item h3').forEach((item) => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    </script>
+</body>
+</html>

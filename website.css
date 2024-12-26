@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.about-image {
+    display: block;
+    margin: 20px auto 0; /* 上方20px間距，居中顯示 */
+    max-width: 100%; /* 防止圖片超出容器寬度 */
+    height: auto; /* 確保圖片比例正確 */
+}
+
+
+header {
+    background: #0077b6;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #0077b6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005f8a;
+}
+
+footer {
+    background: #003d5b;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #005f8a;
+}
+
+#faq {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    color: #0077b6;
+    cursor: pointer;
+}
+
+.faq-item p {
+    display: none;
+    margin: 10px 0 0;
+}
+
+nav ul li a {
+    text-decoration: none; /* 移除預設底線 */
+    position: relative;
+    padding-bottom: 5px; /* 增加空間，讓底線不緊貼文字 */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* 底線厚度 */
+    background-color: white; /* 或者你想要的顏色 */
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after, 
+nav ul li a:focus::after {
+    width: 100%; /* 滑過時展開底線 */
+}
+
+.music-item img {
+    width: 50px; /* 設置圖片寬度 */
+    height: 50px; /* 設置圖片高度 */
+    border-radius: 10px; /* 如果需要，給圖片加點圓角 */
+    margin-bottom: 5px; /* 圖片和歌名之間的間距 */
